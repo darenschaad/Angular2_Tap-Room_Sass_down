@@ -24,7 +24,8 @@ export class AppComponent {
       new Keg("Apocolyspe IPA", "10 Barrel", 5, 6.7, 1),
       new Keg("Four", "Upright", 5, 6.2, 2),
       new Keg("Tecate", "Tecate", 3, 4.3, 3),
-      new Keg("Pliny the Younger", "Russian River Brewery", 10, 11, 4)
+      new Keg("Tricerahops", "Ninkasi", 5, 8.1, 4),
+      new Keg("Pliny the Younger", "Russian River Brewery", 10, 11, 5)
     ];
   }
   kegWasSelected(clickedKeg: Keg): void {

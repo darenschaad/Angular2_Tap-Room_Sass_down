@@ -14,11 +14,11 @@ export class AbvPipe implements PipeTransform {
       });
     }else if(desiredState === "medium"){
       return input.filter((keg) =>{
-        return (keg.abv >= 5 && keg.abv < 8)
+        return (keg.abv >= 5 && keg.abv <= 8)
       });
     }else if (desiredState === "high"){
       return input.filter((keg) =>{
-        return (keg.abv >= 8)
+        return (keg.abv > 8)
       });
     }else {
       return input;

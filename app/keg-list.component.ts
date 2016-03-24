@@ -14,17 +14,17 @@ import { AbvPipe } from './abv.pipe';
   pipes: [ChangePipe, AbvPipe],
   directives: [KegComponent, EditKegPriceComponent, NewKegComponent],
   template: `
-  <select (change)="onChange($event.target.value)">
+  <select class="changeKeg" (change)="onChange($event.target.value)">
     <option value="all">Show All</option>
     <option value="low">Show kegs with 10 pints or less</option>
   </select>
-  <select (abv)="onChange($event.target.value)">
+  <select class="abv" (change)="onAbv($event.target.value)">
     <option value="all">Show All</option>
-    <option value="low">Show Beers below 5% ABV </option>
-    <option value="medium">Show Beers betwee 5% and 8% ABV </option>
-    <option value="high">Show Beers 8% ABV and above </option>
+    <option value="low">Below 5% ABV </option>
+    <option value="medium">Between 5% & 8% ABV </option>
+    <option value="high">Above 8% ABV </option>
   </select>
-  <keg-display *ngFor="#currentKeg of kegList | change:filterLow"
+  <keg-display *ngFor="#currentKeg of kegList | change:filterLow | abv:filterAbv"
     (click)= "kegClicked(currentKeg)"
     [class.selected]="currentKeg === selectedKeg"
     [keg]="currentKeg">
@@ -40,6 +40,7 @@ export class KegListComponent {
   public onKegSelect: EventEmitter<Keg>;
   public selectedKeg: Keg;
   public filterLow : string = "all";
+  public filterAbv : string = "all";
   constructor() {
     this.onKegSelect = new EventEmitter();
   }
@@ -56,5 +57,8 @@ export class KegListComponent {
   onChange(filterOption) {
     this.filterLow = filterOption;
     console.log(this.filterLow);
+  }
+  onAbv(filterOption) {
+    this.filterAbv = filterOption;
   }
 }
