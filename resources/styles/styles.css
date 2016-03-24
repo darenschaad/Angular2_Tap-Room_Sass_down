@@ -1,0 +1,65 @@
+body {
+  background-color: #FFFEEE;
+}
+
+h1 {
+  color: blue;
+}
+
+.selected {
+  color: #22bdf0;
+}
+
+.task-form {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.input-lg {
+  margin: 3px;
+
+}
+
+.add {
+  margin-top: 3px;
+  margin-left: -11px;
+}
+
+.beer-icons {
+  max-width:32px;
+  max-height:auto;
+}
+
+.high {
+  color: #B21A0A;
+}
+
+.medium {
+  color: #FFB530;
+}
+
+.cheap {
+  color: #41B22B;
+}
+
+select {
+  margin: 5px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(http://icons.iconarchive.com/icons/icons8/android/512/Food-Beer-Glass-icon.png) 96% / 15% no-repeat #eee;
+}
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+@media screen and (min-width:0\0) {
+    select {
+        background:none;
+        padding: 5px;
+    }
+}
