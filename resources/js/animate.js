@@ -7,13 +7,13 @@ $(function() {
       }, 500);
 
       $(".barSide").animate({
-        left: '0'
+        left: '15'
       }, 500);
     });
     $('.inventorySlide').click(function() {
 
       $(".barSide").animate({
-        left: '-180%'
+        left: '-165%'
       }, 500);
 
       $(".inventorySide").animate({

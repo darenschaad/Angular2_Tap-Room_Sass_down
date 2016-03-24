@@ -12,7 +12,7 @@ import { AlcoholComponent } from './alcohol.component';
       <h3
       [class.high]="keg.price >= 8"
       [class.medium]="keg.price > 3 && keg.price <8"
-      [class.cheap]="keg.price <= 3">{{keg.beerName}} $\{{keg.price.toFixed(2)}}</h3>
+      [class.cheap]="keg.price <= 3">{{keg.beerName}} - $\{{keg.price.toFixed(2)}}</h3>
       <h4> ABV= {{keg.abv}}%, Brewery: {{keg.beerBrand}}, Pints Remaining: {{keg.pintCount}} </h4>
       <input placeholder="Number of Pints" type="number" #newPints>
       <button class="btn-sm btn-info" (click)="beerSale(newPints)">Sell Pints</button>
